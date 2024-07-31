@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NIVEDTA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">NIVEDITA</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-IZmvzSRRso7AakTA6xMeOHkVShdebwKNTw&s);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Nivedita</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'Student  ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>Web Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+							<a href="https://www.linkedin.com/in/nivedita-ridhi-a3765525a" class="btn btn-white btn-outline-white py-3 px-4">my profile</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Nivedita</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Web Developer</span></p>
+										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
+										<p><span class="title-s">Address: </span> <span>Punjab, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>DSA</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>html</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>CSS</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>JAVA SCRIPT</span> <span class="pull-right"></span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									
+									
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I'm an undergraduate student in Information Technology engineering at National Institute of Technology Jalandhar .</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Web Developer</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>									
+									<li class="d-flex"><span>Other Skills:</span> <span>Good Problem Solving, Data Structure and Algorithms</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, playing volleyball</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/nivedita-ridhi-a3765525a" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>I'm Beginner , Internship: now currently starting a new position as Web Developer at CognoRise InfoTech.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date"> <-2024-> </span>
+						<h2>WEB DEVELOPMENT</h2>
+						<span class="position">Intern</span>
+						<p class="mt-4">One month internship  
+							<ul>
+								<h2>At Cognorise Infotech</h2>
+								<li>Completing tasks using HTML,CSS,JAVA SCRIPTS.</li >
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2026</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">National Institute of Technology Jalandhar.</span>
+    					
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2020-2022</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Swami Swatantranand Memorial College.</span>
+    					<p class="mt-4">Grade: First class distinction.</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the projects done by me.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/rishabhnmishra/SQL_Music_Store_Analysis/blob/main/Music_Store_Query.sql" class="block-20 zoom-effect" style="background-image: url('data:image/png;base64,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');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading">Soduko Solver</h3>
+                <p>• A sudoku solver is a website based on html and javascript .uses concept like backtracking , matrix ,basic maths.</p>
+			    <p>• It allow user to get sudoku Puzzle and its solution</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/rishabhnmishra/Python_Diwali_Sales_Analysis/blob/main/Diwali_Sales_Analysis.ipynb" class="block-20 zoom-effect" style="background-image: url('https://files.realpython.com/media/Build-an-AI-Game-Engine-for-Tic-Tac-Toe-in-Python_Watermarked.b90cdf84c417.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading">Tic-Tac-Toe Game</h3>
+                <p>• Programmed a Tic-Tac-Toe game as a console application, employing object-oriented programming 
+					concepts like classes and objects to structure the game logic.</p> 
+				<p>• Developed algorithms to check for win conditions, enhancing the game's challenge and engagement level.</p>
+              </div>
+            </div>
+          </div>         
+            </div>
+          </div>
+        </div>
+	<br>
+	
+			  </div>
+			</div>
+			
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+
+	
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Punjab, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+91 7710626306</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">niveditaridhi6@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+
+		 
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					 
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/nivedita-ridhi-a3765525a"><span class="icon-linkedin"></span></a></li> 
+				      <li class="ftco-animate"><a href="https://www.instagram.com/nivedita_ridhi?igsh=MXNnMTR6Y255Z21wdQ=="><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
